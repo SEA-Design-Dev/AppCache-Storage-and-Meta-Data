@@ -1,6 +1,16 @@
-# UXE - Advanced HTML and Semantics
+# UXE - AppCache, Storage and Meta Data
 
-For this assignment, students will be required to produce a single static HTML page view that encompasses the properties of semantic HTML and illustrates the the HTML outline, used examples of Microdata, Microformats or RDF and includes concepts of ARIA.
+For this assignment, students will be required to produce a single static HTML page view that:
+
+- Uses static HTML and simple assets (css, images, etc ... )
+- Build simple functionality that exposes one of the following
+  - AppCache
+  - Local Storage
+  - indexDB
+  - File API
+- HTML should use examples of
+  - Microdata, Microformats or RDF
+  - ARIA
 
 
 ## Submitting assignments
