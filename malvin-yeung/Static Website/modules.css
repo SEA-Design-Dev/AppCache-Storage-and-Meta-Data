@@ -143,6 +143,10 @@ html, body{
   height: 200px;
 }
 
+.code-fellows{
+  width: 500px;
+  height: 250px;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 959px){
 
@@ -234,6 +238,16 @@ main{
 .malvin{
   display: block;
   margin: 0 auto;
+}
+
+.jenifer{
+  display: block;
+  margin: 0 auto;
+}
+
+.code-fellows{
+  width: 100%;
+  height: 100%;
 }
 
 }
