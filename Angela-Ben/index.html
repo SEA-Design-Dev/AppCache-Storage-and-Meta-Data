@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html manifest="example.appcache">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+      function savetext () {
+        var s = document.getElementById ("idTextarea").value;
+        if (s != localStorage.savedtext) {
+          localStorage.savedtext = s;
+          }
+        document.getElementById ("idCharCount").innerHTML = s.length;
+        }
+      function startup () {
+        if (typeof (Storage) == undefined) {
+          document.getElementById ("idCaveat").innerHTML = ", which unfortunately is not available in this browser";
+          }
+        else {
+          if (localStorage.savedtext == undefined) {
+            localStorage.savedtext = "";
+            }
+          document.getElementById ("idTextarea").value = localStorage.savedtext;
+          self.setInterval (function () {savetext ()}, 1000); //call every second
+          }
+        }
+      </script>
+  </head>
+  <body>
+    <textarea id="idTextarea">this is text</textarea>
+    <script>
+      startup ();
+      </script>
+
+  </body>
+</html>
