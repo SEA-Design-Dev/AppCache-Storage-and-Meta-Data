@@ -1,0 +1,60 @@
+body{
+  margin:0;
+  padding:0;
+
+}
+
+header{
+  background-color: #1D7CF2;
+  padding:0;
+  margin:0;
+  font-family: Lato, sans-serif;
+  text-align: center;
+}
+
+
+h1{
+  padding:0;
+  margin:0;
+  color: white;
+
+}
+
+.nav{
+  color:white;
+}
+
+.nav-list{
+  list-style: none;
+  display: inline-block;
+}
+
+.nav-list li{
+  float: left;
+  margin-right: 20px;
+}
+
+.tsum-list{
+  list-style: none;
+  display: inline-block;
+
+}
+
+.tsum-list li{
+  float: left;
+}
+
+.tsum-list li img{
+  max-width: 200px;
+
+}
+
+.tsum-list li:hover{
+  opacity:0.4;
+  filter:alpha(opacity=40);
+}
+
+.comments{
+  text-align: center;
+
+}
