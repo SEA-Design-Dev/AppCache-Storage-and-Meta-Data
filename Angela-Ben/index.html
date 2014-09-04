@@ -1,37 +1,20 @@
 <!DOCTYPE html>
-<html manifest="example.appcache">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>test</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <title>Don't Forget</title>
     <link rel="stylesheet" href="css/main.css">
-    <script>
-      function savetext () {
-        var s = document.getElementById ("idTextarea").value;
-        if (s != localStorage.savedtext) {
-          localStorage.savedtext = s;
-          }
-        document.getElementById ("idCharCount").innerHTML = s.length;
-        }
-      function startup () {
-        if (typeof (Storage) == undefined) {
-          document.getElementById ("idCaveat").innerHTML = ", which unfortunately is not available in this browser";
-          }
-        else {
-          if (localStorage.savedtext == undefined) {
-            localStorage.savedtext = "";
-            }
-          document.getElementById ("idTextarea").value = localStorage.savedtext;
-          self.setInterval (function () {savetext ()}, 1000); //call every second
-          }
-        }
-      </script>
+    <script src="/jsnote.js"></script>
   </head>
   <body>
-    <textarea id="idTextarea">this is text</textarea>
-    <script>
-      startup ();
-      </script>
-
+    <header>
+      <h1>Don't Forget!</h1>
+    </header>
+    <main>
+      <h3>Do you have trouble remembering stuff?</h3>
+      <p>Jot it down on the notepad below, and we'll remember for you!</p>
+      <textarea id="idTextarea"></textarea>
+    </main>
+    <script>startup ();</script>
   </body>
 </html>
