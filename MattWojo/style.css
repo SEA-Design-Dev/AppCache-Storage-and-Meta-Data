@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: red;
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  color: blue;
+  margin: 0 auto;
+}
+
+ul {
+list-style-type: none;
+display: inline;
+text-align: center;
+}
+
+div img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 2%;
+}
+
+#matt {
+  margin-left: 25%;
+}
+
+#craig {
+  float: right;
+  margin-right: 25%;
+}
+
