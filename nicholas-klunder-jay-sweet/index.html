@@ -3,46 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Custom Background Picture</title>
-  <style>
-  h1 {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    font: bold 10em/1.2 Impact, Arial, sans-serif;
-    margin: 0 auto;
-  }
-  main {
-    background-color: white;
-    margin: 20px;
-  }
-  </style>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <main>
-    <p>Upload your favorite image.</p>
+  <header>
+    <h1>Upload Your Favorite Image</h1>
     <input type="file" id="fileInput">
-    <h1>F*CK A<br>BOOTSTRAP</h1>
+  </header>
+  <main>
+    <p id="secretMessage">F*CK A<br>BOOTSTRAP</p>
   </main>
-  <script>
-  var fileInput = document.getElementById("fileInput");
-  var hiddenMessage = document.getElementsByTagName("h1")[0];
-
-  fileInput.addEventListener('change', function(e) {
-    var file = fileInput.files[0];
-
-      var reader = new FileReader();
-
-      reader.onload = function(e) {
-
-        var dataURI = reader.result;
-        var styleUpdate = "background: url(" + dataURI + "); -webkit-background-clip: text; -webkit-text-fill-color: transparent;";
-
-        hiddenMessage.setAttribute("style", styleUpdate);
-      };
-
-      reader.readAsDataURL(file);
-
-  });
-</script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
