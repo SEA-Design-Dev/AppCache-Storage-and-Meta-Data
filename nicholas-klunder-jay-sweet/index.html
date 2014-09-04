@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="secret.appcache">
 <head>
   <meta charset="UTF-8">
   <title>Custom Background Picture</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <header>
+  <header role=banner>
     <h1>Upload Your Favorite Image</h1>
-    <input type="file" id="fileInput">
+    <p class="hidden" aria-hidden="true">when user uploads a photo, hidden message is revealed below."</p>
+    <input type="file" id="fileInput" role=button>
   </header>
-  <main>
-    <p id="secretMessage">F*CK A<br>BOOTSTRAP</p>
+  <main role=main>
+    <p id="secretMessage" aria-hidden="true">F*CK A<br>BOOTSTRAP</p>
   </main>
   <script src="scripts/app.js"></script>
 </body>
