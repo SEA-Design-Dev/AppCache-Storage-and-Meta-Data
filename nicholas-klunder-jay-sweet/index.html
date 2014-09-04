@@ -4,50 +4,45 @@
   <meta charset="UTF-8">
   <title>Custom Background Picture</title>
   <style>
-    h1 {
-      background: yellow;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-align: center;
-      font: bold 10em/1.2 Impact, Arial, sans-serif;
-      margin: 0 auto;
-    }
-    main {
-      background-color: tomato;
-      border: 1px solid blue;
-      margin: 20px;
-    }
+  h1 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font: bold 10em/1.2 Impact, Arial, sans-serif;
+    margin: 0 auto;
+  }
+  main {
+    background-color: white;
+    margin: 20px;
+  }
   </style>
 </head>
 <body>
   <main>
     <p>Upload your favorite image.</p>
-    <input type="file" id="imageInput">
+    <input type="file" id="fileInput">
     <h1>F*CK A<br>BOOTSTRAP</h1>
   </main>
   <script>
-    var hiddenMessage = document.getElementsByTagName("h1")[0];
-    var imageInput = document.getElementById("imageInput");
+  var fileInput = document.getElementById("fileInput");
+  var hiddenMessage = document.getElementsByTagName("h1")[0];
 
-    imageInput.addEventListener("change", function (event) {
-      var image = imageInput.files[0];
+  fileInput.addEventListener('change', function(e) {
+    var file = fileInput.files[0];
+
       var reader = new FileReader();
 
-      reader.onload = function (event) {
-      hiddenMessage.appendChild(img);
-      console.log(image);
+      reader.onload = function(e) {
 
+        var dataURI = reader.result;
+        var styleUpdate = "background: url(" + dataURI + "); -webkit-background-clip: text; -webkit-text-fill-color: transparent;";
 
-      var img = new Image();
-      img.src = reader.result;
-      console.log(img);
+        hiddenMessage.setAttribute("style", styleUpdate);
+      };
 
+      reader.readAsDataURL(file);
 
-      var styleUpdate = "background: url(" + img.src + "); -webkit-background-clip: text; -webkit-text-fill-color: transparent;";
-
-      hiddenMessage.setAttribute("style", styleUpdate);
-    };
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
