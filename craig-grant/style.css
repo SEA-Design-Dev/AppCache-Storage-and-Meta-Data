@@ -1,4 +1,4 @@
-h1 {
+h1, h2 {
   text-align: center;
   font-size: 3em;
   color: red;
@@ -10,16 +10,14 @@ p {
 }
 
 h2 {
-  text-align: center;
   font-size: 2em;
   color: blue;
-  margin: 0 auto;
 }
 
 ul {
-list-style-type: none;
-display: inline;
-text-align: center;
+  list-style-type: none;
+  display: inline;
+  text-align: center;
 }
 
 div img {
@@ -28,11 +26,11 @@ div img {
   margin-bottom: 2%;
 }
 
-#matt {
+.matt {
   margin-left: 25%;
 }
 
-#craig {
+.craig {
   float: right;
   margin-right: 25%;
 }
