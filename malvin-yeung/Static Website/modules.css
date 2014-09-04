@@ -1,0 +1,234 @@
+*{
+  outline: none;
+  text-decoration: none;
+}
+
+html, body{
+  height: 100%;
+}
+
+.title{
+  display: block;
+  padding: 5px 0px 0px 0px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  color: black;
+  text-decoration: none;
+}
+
+.header--pt2{
+  text-align: right;
+}
+
+.nav-bar{
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  list-style: none;
+  text-align: right;
+}
+
+.nav-bar li{
+  padding: 0px 0px 0px 20px;
+  display: inline-block;
+}
+
+.nav-bar a{
+  text-decoration: none;
+  color: black;
+}
+.nav-bar a:hover{
+  color: grey;
+  -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  transition:.3s;
+}
+
+.hire-me{
+  display: block;
+  padding: 10px 10px 10px 10px;
+  margin-top: 6px;
+  border-radius: 3px;
+  border-style: none;
+  background-color: #193c64;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+
+.hire-me:hover{
+  background-color: grey;
+  -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  transition:.3s;
+}
+
+.fblike{
+  display: block;
+  position: absolute;
+  width: 58px;
+  height: 24px;
+  margin: 12px 0px 0px 190px;
+  opacity: 0.8;
+}
+
+.fblike:hover{
+  opacity: 1;
+}
+
+.twitter{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 12px 0px 0px 253px;
+  opacity: 0.8;
+}
+
+.twitter:hover{
+  opacity: 1;
+}
+
+.linkedin{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 12px 0px 0px 283px;
+  opacity: 0.8;
+}
+
+.linkedin:hover{
+  opacity: 1;
+}
+
+.content{
+  height: 100%;
+}
+
+.names{
+  display: block;
+  padding: 5px 0px 0px 0px;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+.malvin{
+  width: 200px;
+  height: 200px;
+}
+
+.malvin-summary{
+  margin-top: 70px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.jennifer-summary{
+  margin-top: 70px;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px){
+
+
+}
+
+ @media only screen and (max-width: 767px) {
+
+body{
+  background-color: lightgrey;
+}
+
+main{
+  border-bottom: none;
+  background-color: lightgrey;
+}
+
+.title{
+  font-size: 50px;
+}
+
+.header--pt1{
+  text-align: center;
+}
+
+.header--pt2{
+  text-align: center;
+  background-color: grey;
+  border-radius: 3px;
+}
+
+.social-links{
+  display: none;
+}
+
+.fblike{
+  display: inline-block;
+  position: relative;
+  margin: 0px 0px 0px 0px;
+  width: 120px;
+  height: 50px;
+}
+
+.twitter, .linkedin{
+  display: inline-block;
+  position: relative;
+  margin: 0px 0px 0px 0px;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-bar ul{
+  padding-left: 0px;
+  padding-top: 10px;
+}
+
+.nav-bar li{
+  display: block;
+  text-align: center;
+  padding-left: 0px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+}
+
+.nav-bar li:nth-child(4){
+  border-bottom: none;
+}
+
+.nav-bar a{
+  color: white;
+}
+
+.nav-bar a:hover{
+  color: white;
+}
+
+.hire-me{
+  width: 100%;
+  font-size: 25px;
+}
+
+.names{
+  font-size: 35px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.malvin{
+  display: block;
+  margin: 0 auto;
+}
+
+}

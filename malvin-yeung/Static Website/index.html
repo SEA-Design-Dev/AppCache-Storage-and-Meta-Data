@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html manifest="reserve.appcache">
+    <head>
+        <title>Team UX!</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="pictures/icon.png">
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="skeleton.css">
+        <link rel="stylesheet" type="text/css" href="modules.css">
+        <link rel="stylesheet" type="text/css" href="color.css">
+        <link rel="stylesheet" type="text/css" href="state.css">
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <link href='http://fonts.googleapis.com/css?family=Lobster|Raleway' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <section class="top-frame">
+            <div class="container">
+                <header class="header">
+                    <div class="header--pt1 four columns">
+                        <div class="title" role="title">Team UX</div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><img class="fblike" src="pictures/fblike.png" alt="Facebook Like"></a>
+                        <a href="#"><img class="twitter" src="pictures/twitter-logo.png" alt="Twitter"></a>
+                        <a href="#"><img class="linkedin" src="pictures/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                    <div class="header--pt2 offset-by-three seven columns">
+                        <nav class="nav-bar" role="menubar">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Bio</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header--pt3 two columns">
+                        <nav class="nav-buttons">
+                            <a href="#"><input class="hire-me" type="button" value="Hire us"></a>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <article>
+                    <section>
+                        <div class="five columns">
+                            <h1 class="names" itemscope itemtype="http://schema.org/Person"><span itemprop="Name">Malvin</span> <span itemprop="familyName">Yeung</span></h1>
+                            <div>
+                                <img class="malvin" src="pictures/malvin.jpg" alt="Malvin">
+                            </div>
+                        </div>
+                        <div class="eleven columns">
+                            <summary class="malvin-summary">
+                                Want to hire Malvin? Get on the waiting list!
+                                <input id="hire-malvin" type="text" placeholder="name/company">
+                            </summary>
+                            <div id="malvin-results"></div>
+                        </div>
+                    </section>
+                    <div class="clear"></div>
+                    <section>
+                        <div class="five columns">
+                            <h1 class="names" itemscope itemtype="http://schema.org/Person"><span itemprop="Name">Jennifer</span> <span itemprop="familyName">Stambaugh</span></h1>
+                        </div>
+                        <div class="eleven columns">
+                            <summary class="jennifer-summary">
+                            Want to hire Jennifer? Get on the waiting list!
+                            <input id="hire-jennifer" type="text" placeholder="name/company">
+                            </summary>
+                            <div id="jennifer-results"></div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </section>
+        <script type="text/javascript">
+            $(".hire-me").click(function(){
+                alert("Nobody is available! Come back again another time!");
+            })
+
+            // Store
+            localStorage.setItem("lastname", "Smith");
+            // Retrieve
+            document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        </script>
+    </body>
+</html>
