@@ -48,7 +48,7 @@
                 <article>
                     <section>
                         <div class="five columns">
-                            <h1 class="names" itemscope itemtype="http://schema.org/Person"><span itemprop="Name">Malvin</span> <span itemprop="familyName">Yeung</span></h1>
+                            <h1 class="names" itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="Name">Malvin</span> <span itemprop="familyName">Yeung</span></h1>
                             <div>
                                 <img class="malvin" src="pictures/malvin.jpg" alt="Malvin">
                             </div>
@@ -57,6 +57,7 @@
                             <summary class="malvin-summary">
                                 Want to hire Malvin? Get on the waiting list!
                                 <input id="hire-malvin" type="text" placeholder="name/company">
+                                <input id="submit-button" type="button" value="Submit">
                             </summary>
                             <div id="malvin-results"></div>
                         </div>
@@ -64,7 +65,7 @@
                     <div class="clear"></div>
                     <section>
                         <div class="five columns">
-                            <h1 class="names" itemscope itemtype="http://schema.org/Person"><span itemprop="Name">Jennifer</span> <span itemprop="familyName">Stambaugh</span></h1>
+                            <h1 class="names" itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="Name">Jennifer</span> <span itemprop="familyName">Stambaugh</span></h1>
                         </div>
                         <div class="eleven columns">
                             <summary class="jennifer-summary">
@@ -82,10 +83,19 @@
                 alert("Nobody is available! Come back again another time!");
             })
 
-            // Store
-            localStorage.setItem("lastname", "Smith");
-            // Retrieve
-            document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+            $(document).ready(function() {
+                $( "#malvin-results" ).append("<p>Thank you " + localStorage.getItem("stored") + " for your interest! You have been added to the waiting list!</p>");
+            });
+
+            var save_button = document.getElementById('submit-button');
+            save_button.onclick = saveData;
+
+            function saveData(){
+                var input = document.getElementById("hire-malvin");
+                localStorage.setItem("stored", input.value);
+                $( "#malvin-results" ).append("<p>Thank you " + localStorage.getItem("stored") + " for your interest! You have been added to the waiting list!</p>");
+            };
+
         </script>
     </body>
 </html>
