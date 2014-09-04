@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# 2010-08-4:v1
+index.html
+style.css
+'https://avatars2.githubusercontent.com/u/7566797?v=2&s=460'
+'https://avatars0.githubusercontent.com/u/8334911?v=2&s=460'
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+# static.html will be served if main.py is inaccessible
+# offline.jpg will be served in place of all images in images/large/
+# offline.html will be served in place of all other .html files
+FALLBACK:
+/main.py /static.html
+images/large/ images/offline.jpg
