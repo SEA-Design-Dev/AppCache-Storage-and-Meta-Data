@@ -4,16 +4,30 @@
   <meta charset="UTF-8">
   <title>Custom Background Picture</title>
   <style>
+    h1 {
+      background: yellow;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      font: bold 10em/1.2 Impact, Arial, sans-serif;
+      margin: 0 auto;
+    }
     main {
       background-color: tomato;
+      border: 1px solid blue;
+      margin: 20px;
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Custom Backgrounds!</h1>
     <p>Upload your favorite image.</p>
     <input type="file">
+    <h1>F*CK A<br>BOOTSTRAP</h1>
   </main>
+  <script>
+    var back = document.getElementsByTagName("h1")[0];
+    var styles = "background: blue; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+  </script>
 </body>
 </html>
