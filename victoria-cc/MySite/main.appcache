@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-#version 2.1
+#version 2.4
 
 index.html
 css/base.css
@@ -11,5 +11,6 @@ img/minnie.jpg
 img/donald.jpg
 img/daisy.jpg
 img/banner.jpg
+jquery-1.11.1.min.js
 
 
