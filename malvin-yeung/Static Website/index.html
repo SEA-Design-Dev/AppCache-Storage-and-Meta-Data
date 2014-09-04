@@ -55,7 +55,7 @@
                         </div>
                         <div class="eleven columns">
                             <summary class="malvin-summary">
-                                Want to hire Malvin? Get on the waiting list!
+                                Want to hire us? Get on the waiting list!
                                 <input id="hire-malvin" type="text" placeholder="name/company">
                                 <input id="submit-button" type="button" value="Submit">
                             </summary>
@@ -65,14 +65,16 @@
                     <div class="clear"></div>
                     <section>
                         <div class="five columns">
-                            <h1 class="names" itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="Name">Jennifer</span> <span itemprop="familyName">Stambaugh</span></h1>
+                            <h1 class="names" itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="Name">Jenifer</span> <span itemprop="familyName">Stambaugh</span></h1>
+                            <div>
+                                <img class="jenifer" src="pictures/jenifer.jpg" alt="Jenifer">
+                            </div>
                         </div>
                         <div class="eleven columns">
-                            <summary class="jennifer-summary">
-                            Want to hire Jennifer? Get on the waiting list!
-                            <input id="hire-jennifer" type="text" placeholder="name/company">
+                            <summary class="jenifer-summary">
+
                             </summary>
-                            <div id="jennifer-results"></div>
+                            <div id="jenifer-results"></div>
                         </div>
                     </section>
                 </article>
@@ -82,7 +84,7 @@
             $(".hire-me").click(function(){
                 alert("Nobody is available! Come back again another time!");
             })
-
+            //Malvin
             $(document).ready(function() {
                 $( "#malvin-results" ).append("<p>Thank you " + localStorage.getItem("stored") + " for your interest! You have been added to the waiting list!</p>");
             });
