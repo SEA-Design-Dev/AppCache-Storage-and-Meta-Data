@@ -4,12 +4,14 @@ body{
 }
 
 #wrapper{
-margin: 200px auto;
-padding:20px;
-width: 600px;
+margin: 100px auto;
+padding:20px 30px;
+width: 400px;
 font-family:sans-serif;
-border:2px solid grey;
+border:1px solid #404040;
 background-color:#FFF;
+border-radius:15px;
+box-shadow: 5px 5px 5px #404040;
 }
 body img{
 margin:0 auto;
@@ -20,4 +22,8 @@ width:100px;
 margin: 0 auto 50px auto;
 width:100px;
 
+}
+
+p{
+  font-size:70%;
 }

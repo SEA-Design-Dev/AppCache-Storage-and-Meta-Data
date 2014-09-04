@@ -9,7 +9,7 @@
     <div id="image"><img src="CodeFellowsLogo.jpeg"></div>
     <form id="testForm"  action="" role="form">
       <label>Enter Your Name</label>
-      <input type="text" name="name" id="name" class="stored" value="" aria-required="true"/><br>
+      <input type="text" name="yourname" id="yourname" class="stored" value="" aria-required="true"/><br>
       <label>Enter Your Hometown</label>
       <input type="text" name="hometown" id="hometown" class="stored" aria-required="true"/><br>
       <input type="submit" class="demo-button" value="Submit" aria-describedby="Submit Button"/>
@@ -20,21 +20,24 @@
     </div>
     <script type="text/javascript">
       $(document).ready(function () {
-        function init() {
-          if (localStorage["name"]) {
-             $('#name').val(localStorage["name"]);
+        function onpageload() { //This function checks to see if there are valuses stored in sessionStorage
+          if (sessionStorage["yourname"]) {
+             $('#yourname').val(sessionStorage["yourname"]);
+          }
+          else {
+            alert("Enter your name and hometown!")
           };
-          if (localStorage["hometown"]) {
-             $('#hometown').val(localStorage["hometown"]);
+          if (sessionStorage["hometown"]) {
+             $('#hometown').val(sessionStorage["hometown"]);
           };
         };
-        init();
+        onpageload();
         });
       $('.stored').keyup(function () {
-      localStorage[$(this).attr('name')] = $(this).val();
+      sessionStorage[$(this).attr('name')] = $(this).val();
       });
       $('#testForm').submit(function() {
-      alert("Your name is " + localStorage["name"] + ". Your hometown is " + localStorage["hometown"] + ". Thanks for playing!");
+      alert("Your name is " + sessionStorage["yourname"] + ". Your hometown is " + sessionStorage["hometown"] + ". Thanks for playing!");
       });
     </script>
 
