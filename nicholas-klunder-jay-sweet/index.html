@@ -22,12 +22,32 @@
 <body>
   <main>
     <p>Upload your favorite image.</p>
-    <input type="file">
+    <input type="file" id="imageInput">
     <h1>F*CK A<br>BOOTSTRAP</h1>
   </main>
   <script>
-    var back = document.getElementsByTagName("h1")[0];
-    var styles = "background: blue; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+    var hiddenMessage = document.getElementsByTagName("h1")[0];
+    var imageInput = document.getElementById("imageInput");
+
+    imageInput.addEventListener("change", function (event) {
+      var image = imageInput.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (event) {
+      hiddenMessage.appendChild(img);
+      console.log(image);
+
+
+      var img = new Image();
+      img.src = reader.result;
+      console.log(img);
+
+
+      var styleUpdate = "background: url(" + img.src + "); -webkit-background-clip: text; -webkit-text-fill-color: transparent;";
+
+      hiddenMessage.setAttribute("style", styleUpdate);
+    };
+    });
   </script>
 </body>
 </html>
