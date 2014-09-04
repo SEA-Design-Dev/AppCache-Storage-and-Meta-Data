@@ -1,4 +1,23 @@
 body{
-margin: 0 auto;
-width: 960px;
+  background-color:grey;
+
+}
+
+#wrapper{
+margin: 200px auto;
+padding:20px;
+width: 600px;
+font-family:sans-serif;
+border:2px solid grey;
+background-color:#FFF;
+}
+body img{
+margin:0 auto;
+width:100px;
+
+}
+#image{
+margin: 0 auto 50px auto;
+width:100px;
+
 }

@@ -1,0 +1,3 @@
+var foo = localStorage.getItem("bar");
+// ...
+localStorage.setItem("bar", foo);

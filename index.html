@@ -2,11 +2,44 @@
 <html manifest="example.appcache">
   <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <script src="javascript.js"></script>
+    <script src="jquery-1.11.1.min.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <img src="CodeFellowsLogo.jpeg">
-  </body>
+    <div id="wrapper">
+    <div id="image"><img src="CodeFellowsLogo.jpeg"></div>
+    <form id="testForm"  action="" role="form">
+      <label>Enter Your Name</label>
+      <input type="text" name="name" id="name" class="stored" value="" aria-required="true"/><br>
+      <label>Enter Your Hometown</label>
+      <input type="text" name="hometown" id="hometown" class="stored" aria-required="true"/><br>
+      <input type="submit" class="demo-button" value="Submit" aria-describedby="Submit Button"/>
+    </form>
+    <div itemscope>
+      <p>This webpage was created by <span itemprop="name">Sean</span> and <span itemprop="name">Maggie</span> on <time datetime="2014-09-04">September 4, 2014.</p>
 
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        function init() {
+          if (localStorage["name"]) {
+             $('#name').val(localStorage["name"]);
+          };
+          if (localStorage["hometown"]) {
+             $('#hometown').val(localStorage["hometown"]);
+          };
+        };
+        init();
+        });
+      $('.stored').keyup(function () {
+      localStorage[$(this).attr('name')] = $(this).val();
+      });
+      $('#testForm').submit(function() {
+      alert("Your name is " + localStorage["name"] + ". Your hometown is " + localStorage["hometown"] + ". Thanks for playing!");
+      });
+    </script>
+
+
+
+
+  </body>
 </html>
