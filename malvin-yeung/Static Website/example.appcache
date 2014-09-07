@@ -1,5 +1,6 @@
 CACHE MANIFEST
 
+CACHE:
 index.html
 modules.css
 skeleton.css
@@ -11,5 +12,9 @@ pictures/malvin.jpg
 pictures/twitter-logo.png
 pictures/jenifer.jpg
 
-NETWORK
+NETWORK:
 http://uw.startupweekend.org/files/2014/05/CodeFellows.png
+
+FALLBACK:
+index.html
+pictures/codefellows.png
