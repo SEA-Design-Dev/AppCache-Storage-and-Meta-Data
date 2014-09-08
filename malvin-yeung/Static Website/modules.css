@@ -7,7 +7,7 @@ html, body{
   height: 100%;
 }
 
-.title{
+.header--pt1__title{
   display: block;
   padding: 5px 0px 0px 0px;
   font-family: 'Raleway', sans-serif;
@@ -18,11 +18,50 @@ html, body{
   margin-top: 0px;
 }
 
+.social-links__fblike{
+  display: block;
+  position: absolute;
+  width: 58px;
+  height: 24px;
+  margin: 12px 0px 0px 190px;
+  opacity: 0.8;
+}
+
+.social-links__fblike:hover{
+  opacity: 1;
+}
+
+.social-links__twitter{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 12px 0px 0px 253px;
+  opacity: 0.8;
+}
+
+.social-links__twitter:hover{
+  opacity: 1;
+}
+
+.social-links__linkedin{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 12px 0px 0px 283px;
+  opacity: 0.8;
+}
+
+.social-links__linkedin:hover{
+  opacity: 1;
+}
+
 .header--pt2{
   text-align: right;
 }
 
-.nav-bar{
+.header--pt2__nav-bar{
   display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
@@ -30,16 +69,16 @@ html, body{
   text-align: right;
 }
 
-.nav-bar li{
+.header--pt2__nav-bar__list li{
   padding: 0px 0px 0px 20px;
   display: inline-block;
 }
 
-.nav-bar a{
+.header--pt2__nav-bar__list li a{
   text-decoration: none;
   color: black;
 }
-.nav-bar a:hover{
+.header--pt2__nav-bar__list li a:hover{
   color: grey;
   -o-transition:.3s;
   -ms-transition:.3s;
@@ -48,7 +87,7 @@ html, body{
   transition:.3s;
 }
 
-.hire-me{
+.header--pt3__nav-buttons__hire-me{
   display: block;
   padding: 10px 10px 10px 10px;
   margin-top: 6px;
@@ -63,7 +102,7 @@ html, body{
   outline: none;
 }
 
-.hire-me:hover{
+.header--pt3__nav-buttons__hire-me:hover{
   background-color: grey;
   -o-transition:.3s;
   -ms-transition:.3s;
@@ -72,50 +111,11 @@ html, body{
   transition:.3s;
 }
 
-.fblike{
-  display: block;
-  position: absolute;
-  width: 58px;
-  height: 24px;
-  margin: 12px 0px 0px 190px;
-  opacity: 0.8;
-}
-
-.fblike:hover{
-  opacity: 1;
-}
-
-.twitter{
-  display: block;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  margin: 12px 0px 0px 253px;
-  opacity: 0.8;
-}
-
-.twitter:hover{
-  opacity: 1;
-}
-
-.linkedin{
-  display: block;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  margin: 12px 0px 0px 283px;
-  opacity: 0.8;
-}
-
-.linkedin:hover{
-  opacity: 1;
-}
-
 .content{
   height: 100%;
 }
 
-.names{
+.article--pt1__profile__name{
   display: block;
   padding: 5px 0px 0px 0px;
   font-family: 'Lobster', cursive;
@@ -124,27 +124,32 @@ html, body{
   text-decoration: none;
 }
 
-.malvin{
+.article--pt1__profile__picture__malvin{
   width: 200px;
   height: 200px;
 }
 
-.malvin-summary{
+.article--pt1__input__summary{
   margin-top: 70px;
   font-family: 'Raleway', sans-serif;
 }
 
-.jenifer-summary{
-  margin-top: 70px;
-  font-family: 'Raleway', sans-serif;
+
+.article--pt2__profile__name{
+  display: block;
+  padding: 5px 0px 0px 0px;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
 }
 
-.jenifer {
+.article--pt2__profile__picture__jenifer {
   width: 200px;
   height: 200px;
 }
 
-.code-fellows{
+.article--pt3__image{
   width: 500px;
   height: 250px;
 }
@@ -161,12 +166,12 @@ body{
   background-color: lightgrey;
 }
 
-main{
+/*main{
   border-bottom: none;
   background-color: lightgrey;
-}
+}*/
 
-.title{
+.header--pt1__title{
   font-size: 50px;
 }
 
@@ -184,7 +189,7 @@ main{
   display: none;
 }
 
-.fblike{
+.social-links__fblike{
   display: inline-block;
   position: relative;
   margin: 0px 0px 0px 0px;
@@ -192,7 +197,7 @@ main{
   height: 50px;
 }
 
-.twitter, .linkedin{
+.social-links__twitter, .social-links__linkedin{
   display: inline-block;
   position: relative;
   margin: 0px 0px 0px 0px;
@@ -200,12 +205,12 @@ main{
   height: 50px;
 }
 
-.nav-bar ul{
+.header--pt2__nav-bar__list{
   padding-left: 0px;
   padding-top: 10px;
 }
 
-.nav-bar li{
+.header--pt2__nav-bar__list li{
   display: block;
   text-align: center;
   padding-left: 0px;
@@ -214,40 +219,41 @@ main{
   padding-bottom: 15px;
 }
 
-.nav-bar li:nth-child(4){
+.header--pt2__nav-bar__list li:nth-child(4){
   border-bottom: none;
 }
 
-.nav-bar a{
+.header--pt2__nav-bar a{
   color: white;
 }
 
-.nav-bar a:hover{
+.header--pt2__nav-bar a:hover{
   color: white;
 }
 
-.hire-me{
+.header--pt3__nav-buttons__hire-me{
   width: 100%;
   font-size: 25px;
 }
 
-.names{
+.article--pt1__profile__name,
+.article--pt2__profile__name{
   font-size: 35px;
   margin-bottom: 8px;
   text-align: center;
 }
 
-.malvin{
+.article--pt1__profile__picture__malvin{
   display: block;
   margin: 0 auto;
 }
 
-.jenifer{
+.article--pt2__profile__picture__jenifer{
   display: block;
   margin: 0 auto;
 }
 
-.code-fellows{
+.article--pt3__image{
   width: 100%;
   height: 100%;
 }
