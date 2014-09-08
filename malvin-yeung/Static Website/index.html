@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="english" manifest="example.appcache">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,13 +70,11 @@
         </section>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script type="text/javascript">
             $(".hire-me").click(function(){
                 alert("Nobody is available! Come back again another time!");
             })
-            //Malvin
+
             $(document).ready(function() {
                 $( "#malvin-results" ).append("<p>Thank you " + localStorage.getItem("stored") + " for your interest! You have been added to the waiting list!</p>");
             });
