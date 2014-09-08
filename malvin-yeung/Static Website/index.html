@@ -15,6 +15,7 @@
         <link rel="stylesheet" type="text/css" href="state.css">
         <link rel="stylesheet" type="text/css" href="theme.css">
         <link href='http://fonts.googleapis.com/css?family=Lobster|Raleway' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/modernizr-custom.js"></script>
     </head>
     <body>
@@ -60,8 +61,8 @@
                         <div class="article--pt1__input eleven columns">
                             <summary class="article--pt1__input__summary">
                                 Want to hire us? Get on the waiting list!
-                                <input id="article--pt1__input__summary__input" type="text" placeholder="name/company">
-                                <input id="article--pt1__input__summary__submit" type="button" value="Submit">
+                                <input id="hire-malvin" class="article--pt1__input__summary__input" type="text" placeholder="name/company">
+                                <input id="submit-button" class="article--pt1__input__summary__submit" type="button" value="Submit">
                             </summary>
                             <div id="malvin-results" class="rticle--pt1__input__results"></div>
                         </div>
@@ -81,6 +82,10 @@
                 </article>
             </div>
         </section>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script type="text/javascript">
             $(".hire-me").click(function(){
                 alert("Nobody is available! Come back again another time!");
@@ -98,15 +103,9 @@
                 localStorage.setItem("stored", input.value);
                 $( "#malvin-results" ).append("<p>Thank you " + localStorage.getItem("stored") + " for your interest! You have been added to the waiting list!</p>");
             };
-        </script>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+            //Google Analytics: change UA-XXXXX-X to be your site's ID.
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
