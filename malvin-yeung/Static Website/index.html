@@ -19,68 +19,54 @@
         <script src="js/modernizr-custom.js"></script>
     </head>
     <body>
-        <section class="top-frame">
-            <div class="container">
-                <header class="header">
-                    <div class="header--pt1 four columns">
-                        <h1 class="header--pt1__title" role="heading">Team UX</h1>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><img class="social-links__fblike" src="pictures/fblike.png" alt="Facebook Like"></a>
-                        <a href="#"><img class="social-links__twitter" src="pictures/twitter-logo.png" alt="Twitter"></a>
-                        <a href="#"><img class="social-links__linkedin" src="pictures/linkedin.png" alt="LinkedIn"></a>
-                    </div>
-                    <div class="header--pt2 offset-by-three seven columns">
-                        <nav class="header--pt2__nav-bar" role="menubar">
-                            <ul class="header--pt2__nav-bar__list">
-                                <li class="header--pt2__nav-bar__list__home"><a href="#">Home</a></li>
-                                <li class="header--pt2__nav-bar__list__blog"><a href="#">Blog</a></li>
-                                <li class="header--pt2__nav-bar__list__projects"><a href="#">Projects</a></li>
-                                <li class="header--pt2__nav-bar__list__bio"><a href="#">Bio</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="header--pt3 two columns">
-                        <nav class="header--pt3__nav-buttons">
-                            <a href="#"><input class="header--pt3__nav-buttons__hire-me" type="button" value="Hire us"></a>
-                        </nav>
-                    </div>
-                </header>
-            </div>
+        <section class="top-frame container">
+            <header class="header">
+                <h1 class="header__title four columns" role="heading">Team UX</h1>
+                <nav class="social-links">
+                    <a href="#"><img class="social-links__fblike" src="pictures/fblike.png" alt="Facebook Like"></a>
+                    <a href="#"><img class="social-links__twitter" src="pictures/twitter-logo.png" alt="Twitter"></a>
+                    <a href="#"><img class="social-links__linkedin" src="pictures/linkedin.png" alt="LinkedIn"></a>
+                </nav>
+                <nav class="nav-bar offset-by-three seven columns" role="menubar">
+                    <ul class="nav-bar__list">
+                        <li class="nav-bar__list__home"><a href="#">Home</a></li>
+                        <li class="nav-bar__list__blog"><a href="#">Blog</a></li>
+                        <li class="nav-bar__list__projects"><a href="#">Projects</a></li>
+                        <li class="nav-bar__list__bio"><a href="#">Bio</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav-buttons two columns">
+                    <a href="#"><input class="nav-buttons__hire-me" type="button" value="Hire us"></a>
+                </nav>
+            </header>
         </section>
-        <section class="content">
-            <div class="container">
-                <article>
-                    <section class="article--pt1">
-                        <div class="article--pt1__profile five columns">
-                            <h1 class="article--pt1__profile__name" itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="Name">Malvin</span> <span itemprop="familyName">Yeung</span></h1>
-                            <div class="article--pt1__profile__picture">
-                                <img class="article--pt1__profile__picture__malvin" src="pictures/malvin.jpg" alt="Malvin">
-                            </div>
-                        </div>
-                        <div class="article--pt1__input eleven columns">
-                            <summary class="article--pt1__input__summary">
-                                Want to hire us? Get on the waiting list!
-                                <input id="hire-malvin" class="article--pt1__input__summary__input" type="text" placeholder="name/company">
-                                <input id="submit-button" class="article--pt1__input__summary__submit" type="button" value="Submit">
-                            </summary>
-                            <div id="malvin-results" class="rticle--pt1__input__results"></div>
-                        </div>
-                    </section>
-                    <div class="clear"></div>
-                    <section class="article--pt2">
-                        <div class="article--pt2__profile five columns">
-                            <h1 class="article--pt2__profile__name" itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="Name">Jenifer</span> <span itemprop="familyName">Stambaugh</span></h1>
-                            <div class="article--pt2__profile__picture">
-                                <img class="article--pt2__profile__picture__jenifer" src="pictures/jenifer.jpg" alt="Jenifer">
-                            </div>
-                        </div>
-                    </section>
-                    <div class="article--pt3">
-                      <img class="article--pt3__image" src="http://uw.startupweekend.org/files/2014/05/CodeFellows.png" alt="Code Fellows Logo">
+        <section class="content container">
+            <article>
+                <section class="article--pt1">
+                    <h1 class="article--pt1__profile--name sixteen columns" itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="Name">Malvin</span> <span itemprop="familyName">Yeung</span></h1>
+                    <div class="five columns">
+                        <img class="article--pt1__profile--picture" src="pictures/malvin.jpg" alt="Malvin">
                     </div>
-                </article>
-            </div>
+                    <div class="article--pt1__input eleven columns">
+                        <summary class="article--pt1__input__summary">
+                            Want to hire us? Get on the waiting list!
+                        </summary>
+                        <input id="hire-malvin" class="article--pt1__input__summary__input" type="text" placeholder="name/company">
+                        <input id="submit-button" class="article--pt1__input__summary__submit" type="button" value="Submit">
+                        <div id="malvin-results" class="rticle--pt1__input__results"></div>
+                    </div>
+                </section>
+
+                <div class="clear"></div>
+
+                <section class="article--pt2">
+                    <h1 class="article--pt2__profile--name sixteen columns" itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="Name">Jenifer</span> <span itemprop="familyName">Stambaugh</span></h1>
+                    <img class="article--pt2__profile--picture" src="pictures/jenifer.jpg" alt="Jenifer">
+                </section>
+                <section class="article--pt3">
+                  <img class="article--pt3__image" src="http://uw.startupweekend.org/files/2014/05/CodeFellows.png" alt="Code Fellows Logo">
+                </section>
+            </article>
         </section>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>

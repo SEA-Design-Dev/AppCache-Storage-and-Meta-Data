@@ -7,7 +7,7 @@ html, body{
   height: 100%;
 }
 
-.header--pt1__title{
+.header__title{
   display: block;
   padding: 5px 0px 0px 0px;
   font-family: 'Raleway', sans-serif;
@@ -57,11 +57,7 @@ html, body{
   opacity: 1;
 }
 
-.header--pt2{
-  text-align: right;
-}
-
-.header--pt2__nav-bar{
+.nav-bar{
   display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
@@ -69,16 +65,16 @@ html, body{
   text-align: right;
 }
 
-.header--pt2__nav-bar__list li{
+.nav-bar__list li{
   padding: 0px 0px 0px 20px;
   display: inline-block;
 }
 
-.header--pt2__nav-bar__list li a{
+.nav-bar__list li a{
   text-decoration: none;
   color: black;
 }
-.header--pt2__nav-bar__list li a:hover{
+.nav-bar__list li a:hover{
   color: grey;
   -o-transition:.3s;
   -ms-transition:.3s;
@@ -87,7 +83,7 @@ html, body{
   transition:.3s;
 }
 
-.header--pt3__nav-buttons__hire-me{
+.nav-buttons__hire-me{
   display: block;
   padding: 10px 10px 10px 10px;
   margin-top: 6px;
@@ -102,7 +98,7 @@ html, body{
   outline: none;
 }
 
-.header--pt3__nav-buttons__hire-me:hover{
+.nav-buttons__hire-me:hover{
   background-color: grey;
   -o-transition:.3s;
   -ms-transition:.3s;
@@ -115,7 +111,7 @@ html, body{
   height: 100%;
 }
 
-.article--pt1__profile__name{
+.article--pt1__profile--name{
   display: block;
   padding: 5px 0px 0px 0px;
   font-family: 'Lobster', cursive;
@@ -124,18 +120,18 @@ html, body{
   text-decoration: none;
 }
 
-.article--pt1__profile__picture__malvin{
+.article--pt1__profile--picture{
   width: 200px;
   height: 200px;
 }
 
 .article--pt1__input__summary{
-  margin-top: 70px;
+  margin-top: 0px;
   font-family: 'Raleway', sans-serif;
 }
 
 
-.article--pt2__profile__name{
+.article--pt2__profile--name{
   display: block;
   padding: 5px 0px 0px 0px;
   font-family: 'Lobster', cursive;
@@ -144,7 +140,7 @@ html, body{
   text-decoration: none;
 }
 
-.article--pt2__profile__picture__jenifer {
+.article--pt2__profile--picture{
   width: 200px;
   height: 200px;
 }
@@ -171,15 +167,12 @@ body{
   background-color: lightgrey;
 }*/
 
-.header--pt1__title{
+.header__title{
   font-size: 50px;
-}
-
-.header--pt1{
   text-align: center;
 }
 
-.header--pt2{
+.nav-bar{
   text-align: center;
   background-color: grey;
   border-radius: 3px;
@@ -205,12 +198,12 @@ body{
   height: 50px;
 }
 
-.header--pt2__nav-bar__list{
+.nav-bar__list{
   padding-left: 0px;
   padding-top: 10px;
 }
 
-.header--pt2__nav-bar__list li{
+.nav-bar__list li{
   display: block;
   text-align: center;
   padding-left: 0px;
@@ -219,36 +212,36 @@ body{
   padding-bottom: 15px;
 }
 
-.header--pt2__nav-bar__list li:nth-child(4){
+.nav-bar__list li:nth-child(4){
   border-bottom: none;
 }
 
-.header--pt2__nav-bar a{
+.nav-bar a{
   color: white;
 }
 
-.header--pt2__nav-bar a:hover{
+.nav-bar a:hover{
   color: white;
 }
 
-.header--pt3__nav-buttons__hire-me{
+.nav-buttons__hire-me{
   width: 100%;
   font-size: 25px;
 }
 
-.article--pt1__profile__name,
-.article--pt2__profile__name{
+.article--pt1__profile--name,
+.article--pt2__profile--name{
   font-size: 35px;
   margin-bottom: 8px;
   text-align: center;
 }
 
-.article--pt1__profile__picture__malvin{
+.article--pt1__profile--picture{
   display: block;
   margin: 0 auto;
 }
 
-.article--pt2__profile__picture__jenifer{
+.article--pt2__profile--picture{
   display: block;
   margin: 0 auto;
 }
