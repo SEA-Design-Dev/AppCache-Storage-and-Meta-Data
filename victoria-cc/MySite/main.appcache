@@ -1,0 +1,18 @@
+CACHE MANIFEST
+
+#version 2.4
+
+index.html
+css/base.css
+css/layout.css
+img/mickey.jpg
+img/minnie.jpg
+img/donald.jpg
+img/daisy.jpg
+img/banner.jpg
+jquery-1.11.1.min.js
+
+NETWORK
+*
+
+

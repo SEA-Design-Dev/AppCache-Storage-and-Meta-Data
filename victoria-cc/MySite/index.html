@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html manifest="main.appcache">
+<head>
+  <meta charset="utf-8">
+  <title>Tsum Tsum World</title>
+  <link href="css/base.css" rel="stylesheet" type="text/css"></link>
+  <link href="css/layout.css" rel="stylesheet" type="text/css"></link>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <script src="/jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+</head>
+
+<main>
+  <header role="banner">
+    <h1>Welcome to Tsum Tsum World!</h1>
+
+    <nav role="navigation" class="nav">
+      <ul class="nav-list">
+        <li class="selected">Home</li>
+        <li>Store</li>
+        <li>Our Story</li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+     <section class="tsums">
+      <ul class="tsum-list">
+        <li itemscope itemtype="http://schema.org/Product"><a itemprop="url" href="http://www.disneystore.com/mickey-mouse-tsum-tsum-plush-mini-3-1/2/mp/1355240/1000267/"><img itemprop="image" src="img/mickey.jpg" alt="Mickey"></a></li>
+
+        <li itemscope itemtype="http://schema.org/Product"><a itemprop="url" href="http://www.disneystore.com/minnie-mouse-tsum-tsum-plush-mini-3-1/2/mp/1355162/1000267/"><img itemprop="image" src="img/minnie.jpg" alt="Minnie"></a></li>
+
+        <li itemscope itemtype="http://schema.org/Product"><a itemprop="url" href="http://www.disneystore.com/donald-duck-tsum-tsum-plush-mini-3-1/2/mp/1355194/1000267/"><img itemprop="image" src="img/donald.jpg" alt="Donald"></a></li>
+
+        <li itemscope itemtype="http://schema.org/Product"><a itemprop="url" href="http://www.disneystore.com/mickey-and-friends-tsum-tsum-mini-plush-collection/mp/1359512/1000267/"><img itemprop="image" src="img/daisy.jpg" alt="Daisy"></a></li>
+      </ul>
+    </section>
+
+    <section class="comments">
+      <p>Let me know what you think about my collection<span id="idCaveat"></span>.
+      </p>
+
+      <textarea name="comment" class="comment"></textarea>
+      <!--<textarea id="name" class="stored" role="textbox"></textarea>-->
+      <span id="idCharCount"></span>
+    </section>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    function save() {
+      if (localStorage["comment"]) {
+        $('.comment').val(localStorage["comment"]);
+      }
+    }
+  save();
+});
+$('.comment').keyup(function () {
+  localStorage[$(this).attr('name')] = $(this).val();
+});
+</script>
+
+  </body>
+</main>
+</html>
