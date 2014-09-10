@@ -1,0 +1,43 @@
+<!doctype html>
+<html manifest="example.appcache">
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="image"><img src="CodeFellowsLogo.jpeg"></div>
+    <form id="testForm"  action="" role="form">
+      <label>Enter Your Name</label>
+      <input type="text" name="yourname" id="yourname" class="stored" value="" aria-required="true"/><br>
+      <label>Enter Your Hometown</label>
+      <input type="text" name="hometown" id="hometown" class="stored" aria-required="true"/><br>
+      <input type="submit" class="demo-button" value="Submit" aria-describedby="Submit Button"/>
+    </form>
+    <div itemscope>
+      <p>This webpage was created by <span itemprop="name">Sean</span> and <span itemprop="name">Maggie</span> on <time datetime="2014-09-04">September 4, 2014.</p>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        function onpageload() { //This function checks to see if there are valuses stored in sessionStorage
+          if (sessionStorage["yourname"]) {
+             $('#yourname').val(sessionStorage["yourname"]);
+          }
+          else {
+            alert("Enter your name and hometown!")
+          };
+          if (sessionStorage["hometown"]) {
+             $('#hometown').val(sessionStorage["hometown"]);
+          };
+        };
+        onpageload();
+        });
+      $('.stored').keyup(function () {
+      sessionStorage[$(this).attr('name')] = $(this).val();
+      });
+      $('#testForm').submit(function() {
+      alert("Your name is " + sessionStorage["yourname"] + ". Your hometown is " + sessionStorage["hometown"] + ". Thanks for playing!");
+      });
+    </script>
+  </body>
+</html>
