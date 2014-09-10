@@ -1,7 +1,6 @@
 body{
   margin:0;
   padding:0;
-
 }
 
 header{
@@ -12,12 +11,10 @@ header{
   text-align: center;
 }
 
-
 h1{
   padding:0;
   margin:0;
   color: white;
-
 }
 
 .nav{
@@ -37,7 +34,6 @@ h1{
 .tsum-list{
   list-style: none;
   display: inline-block;
-
 }
 
 .tsum-list li{
@@ -46,7 +42,6 @@ h1{
 
 .tsum-list li img{
   max-width: 200px;
-
 }
 
 .tsum-list li:hover{
@@ -56,5 +51,4 @@ h1{
 
 .comments{
   text-align: center;
-
 }
