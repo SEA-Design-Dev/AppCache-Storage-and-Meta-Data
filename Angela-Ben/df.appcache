@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# 2014-09-6: v1.2
+
+CACHE:
+index.html
+css/main.css
+js/note.js
+
+NETWORK:
+*
