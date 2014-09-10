@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" manifest="secret.appcache">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Background Picture</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header role=banner>
+    <h1>Upload Your Favorite Image</h1>
+    <!-- Paragraph included for screen readers so everyone gets the joke. -->
+    <p class="hidden" aria-hidden="true">When user uploads a photo, hidden message is revealed below."</p>
+    <input type="file" id="fileInput" role=button>
+  </header>
+  <main role=main>
+    <!-- Initially hidden paragraph. Revealed when user uploads a photo. -->
+    <p id="secretMessage" class="secret-message" aria-hidden="true">F*CK A<br>BOOTSTRAP</p>
+  </main>
+  <footer class="hidden" aria-hidden="true">
+    <p>testing</p>
+    <div itemscope itemtype="http://schema.org/Person">
+      <div itemprop="name"><strong>Jay Sweet &amp; Nicholas Klunder</strong></div>
+      <div itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Code Fellows - UX Front-End Dev Accelerator </span></div>
+      <div itemprop="jobtitle">Students</div>
+      <div itemprop="description">File API Assignment</div>
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress">Seattle</div>
+        <div><span itemprop="addressRegion">Washington</span></div><div itemprop="addressCountry">United States</div>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

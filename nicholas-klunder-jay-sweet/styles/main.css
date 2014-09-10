@@ -1,0 +1,39 @@
+.hidden {
+  display: none;
+}
+
+html {
+  background: url(/images/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+h1 {
+  color: white;
+  background-color: rgba(36, 52, 61, 0.1);
+  font-family: Helvetica, sans-serif;
+  padding: 24px;
+  width:100%;
+}
+
+input {
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.secret-message {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font: bold 10em/1.2 Impact, Arial, sans-serif;
+  margin: 0 auto;
+}
