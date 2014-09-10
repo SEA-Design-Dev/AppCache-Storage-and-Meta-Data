@@ -111,7 +111,7 @@ html, body{
   height: 100%;
 }
 
-.article--pt1__profile--name{
+.article--pt1__profile-name{
   display: block;
   padding: 5px 0px 0px 0px;
   font-family: 'Lobster', cursive;
@@ -120,7 +120,7 @@ html, body{
   text-decoration: none;
 }
 
-.article--pt1__profile--picture{
+.article--pt1__profile-picture{
   width: 200px;
   height: 200px;
 }
@@ -131,7 +131,7 @@ html, body{
 }
 
 
-.article--pt2__profile--name{
+.article--pt2__profile-name{
   display: block;
   padding: 5px 0px 0px 0px;
   font-family: 'Lobster', cursive;
@@ -140,7 +140,7 @@ html, body{
   text-decoration: none;
 }
 
-.article--pt2__profile--picture{
+.article--pt2__profile-picture{
   width: 200px;
   height: 200px;
 }
@@ -150,22 +150,11 @@ html, body{
   height: 250px;
 }
 
-
-@media only screen and (min-width: 768px) and (max-width: 959px){
-
-
-}
-
  @media only screen and (max-width: 767px) {
 
 body{
   background-color: lightgrey;
 }
-
-/*main{
-  border-bottom: none;
-  background-color: lightgrey;
-}*/
 
 .header__title{
   font-size: 50px;
@@ -229,19 +218,13 @@ body{
   font-size: 25px;
 }
 
-.article--pt1__profile--name,
-.article--pt2__profile--name{
+.article--pt1__profile-name, .article--pt2__profile-name{
   font-size: 35px;
   margin-bottom: 8px;
   text-align: center;
 }
 
-.article--pt1__profile--picture{
-  display: block;
-  margin: 0 auto;
-}
-
-.article--pt2__profile--picture{
+.article--pt1__profile-picture, .article--pt2__profile-picture{
   display: block;
   margin: 0 auto;
 }
