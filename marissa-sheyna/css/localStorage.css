@@ -1,0 +1,28 @@
+body {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  background-color: whitesmoke;
+  }
+.divHeadline {
+  font-family: "Rancho";
+  font-size: 56px;
+  font-weight: bold;
+  }
+p {
+  font-family: "Droid Sans";
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 130%;
+  }
+textarea {
+  font-family: "Droid Sans";
+  font-size: 16px;
+  line-height: 130%;
+  margin-top: 7px;
+  width: 700px;
+  height: 200px;
+  rows: 15;
+  cols: 80;
+  }
