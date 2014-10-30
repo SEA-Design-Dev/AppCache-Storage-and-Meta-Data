@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage Demo</title>
+    <style type="text/css">
+      body {
+        margin:0;
+      }
+      .box {
+        height:100px;
+        width:100px;
+        border-radius:100px;
+        position:absolute;
+        background:rgb(162, 207, 81);
+      }
+      main {
+        position:fixed;
+        height:100%;
+        width:100%;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="box"></div>
+    </main>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        
+        var elem = $('.box');
+                
+        function saveLocation(offset){
+          var value = JSON.stringify([offset.left, offset.top])
+          localStorage.setItem('circle', value);
+        }
+
+        elem.draggable({
+          containment: 'main',
+          stop: function(){
+            var offset = $(this).offset();
+            saveLocation(offset);
+          }
+        });
+        
+        // Check if we already have data
+        var prevLocation = JSON.parse(localStorage["circle"]);
+        if(prevLocation.length){
+          elem.offset({
+            left: prevLocation[0],
+            top: prevLocation[1]
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
