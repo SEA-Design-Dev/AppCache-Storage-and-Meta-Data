@@ -1,0 +1,33 @@
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Local Storage / Image Upload</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/localStorage.css">
+
+  </head>
+  <body>
+
+    <section class="top-margin">
+      <h1>Local Storage</h1>
+      <p>The text you type is automatically saved
+        every second.You can refresh the page, even
+        quit and relaunch the browser, and the text
+        remains. </p>
+      <textarea id="idTextarea"></textarea>
+    </section>
+
+    <section>
+      <h1>Image File Reader</h1>
+      <p>Select an image file:</p>
+      <input type="file" id="fileInput">
+      <figure id="fileDisplayArea"></figure>
+    </section>
+
+  <script src="js/localStorage.js"></script>
+  <script src="js/filereader.js"></script>
+
+ </body>
+</html>
