@@ -91,31 +91,41 @@
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script>
         $(document).ready(function(){
+
           $('#file').change(function(){
             
+            // Create a new file reader
             var reader = new FileReader();
+            
+            // Read the file as text
             reader.readAsText(this.files[0]);
             
+            // When the file loads, find and replace text
             reader.onload = function() {
               $('#input').html(this.result);
               
               var find = $('#find').val();
               var replace = $('#replace').val();
+              
+              // Find global, case insensitive terms
               var PATTERN = new RegExp(find, 'gi');
               var result = this.result.replace(PATTERN, function(input){
-                console.log(input);
                 var letter1 = input[0];
                 
+                // Maintain capitalized words
                 if(letter1 === letter1.toUpperCase()){
                   replace = " " + replace[0].toUpperCase() + replace.slice(1);
                 }
                 
+                // Return an HTML string
                 return "<em>" + replace + "</em>";
               });
               
+              // Set the output text
               $('#output').html(result);
             }
             
+            // Updated automatically as we type
             $('#find, #replace').keyup(function(){
               reader.onload();
             });

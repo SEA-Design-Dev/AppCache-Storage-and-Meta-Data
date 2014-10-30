@@ -70,7 +70,7 @@
         elem.setPosition = function(){
           var x = localStorage["circleX"];
           var y = localStorage["circleY"];
-          setHeading({top:x, });
+          setHeading({top:y, left:x});
           
           elem.offset({
             left: x,
@@ -86,7 +86,7 @@
         
         // Don't run stuff while focused
         $(window).blur(function(){
-          relayEnabled = setInterval(elem.setPosition, 20);
+          relayEnabled = setInterval(elem.setPosition, 1);
         }).focus(function(){
           clearInterval(relayEnabled);
         });
