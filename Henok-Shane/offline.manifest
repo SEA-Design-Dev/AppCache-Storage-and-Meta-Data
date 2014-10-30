@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# 2014-10-30: v1
+
+#Something about our file
+
+CACHE:
+index.html
+text.js
+offline.html
+
+NETWORK:
+*
+
+FALLBACK:
+/ /offline.html
