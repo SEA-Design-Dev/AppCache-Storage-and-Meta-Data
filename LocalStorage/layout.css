@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+}
+
+#oneaccount {
+	font-size: 36px;
+	color: gray;
+	font-family: 'Open Sans'
+}
+
+#signin {
+	font-size: 14px;
+	color: gray;
+	font-family: 'Open Sans'
+}
+
+button {
+	background-color: #1E90FF;
+	height: 10px;
+	width: 225px;
+	color: white;
+	padding: 10px 10px 25px 10px;
+	border-radius: 10%;
+}
