@@ -5,18 +5,26 @@
     <style type="text/css">
       body {
         margin:0;
+        font-family:Monaco;
       }
-      .box {
+      .circle {
         height:100px;
         width:100px;
         border-radius:100px;
         position:absolute;
         background:rgb(162, 207, 81);
+        border:5px solid rgb(120, 147, 73);
+        cursor:move;
       }
       main {
         position:fixed;
         height:100%;
         width:100%;
+      }
+      main h1 {
+        text-align:center;
+        font-size:20px;
+        color:gray;
       }
     </style>
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
@@ -24,34 +32,66 @@
   </head>
   <body>
     <main>
-      <div class="box"></div>
+      <header>
+        <h1></h1>
+      </header>
+      <div class="circle" role="button"></div>
     </main>
     <script type="text/javascript">
-      $(document).ready(function(){
+      $(document).ready(function(){ 
         
-        var elem = $('.box');
-                
-        function saveLocation(offset){
-          var value = JSON.stringify([offset.left, offset.top])
-          localStorage.setItem('circle', value);
+        // Get the element
+        var elem = $('.circle');
+        
+        // Set heading data
+        var heading = $('header h1');
+        
+        function setHeading(x, y){
+          heading.text("Left: " + Math.round(x) + "px" + " Top: " + Math.round(y) + "px");
         }
-
+        
+        // Saves the data to local storage
+        function saveLocation(offset){
+          localStorage.setItem("circleX", offset.left);
+          localStorage.setItem("circleY", offset.top);
+        }
+        
+        // Set an event to act on drag
         elem.draggable({
           containment: 'main',
-          stop: function(){
+          drag: function(){
             var offset = $(this).offset();
+            setHeading(offset.left, offset.top);
             saveLocation(offset);
           }
         });
         
-        // Check if we already have data
-        var prevLocation = JSON.parse(localStorage["circle"]);
-        if(prevLocation.length){
+        // Sets element from the data
+        elem.setPosition = function(){
+          console.log("Run!");
+          var x = localStorage["circleX"];
+          var y = localStorage["circleY"];
+          setHeading(x,y);
+          
           elem.offset({
-            left: prevLocation[0],
-            top: prevLocation[1]
+            left: x,
+            top: y
           });
         }
+        
+        // Initially render
+        elem.setPosition();
+        
+        // Set an interval to check for changes
+        var relayEnabled;
+        
+        // Don't run stuff while focused
+        $(window).blur(function(){
+          relayEnabled = setInterval(elem.setPosition, 20);
+        }).focus(function(){
+          clearInterval(relayEnabled);
+        });
+
       });
     </script>
   </body>
