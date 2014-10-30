@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage Demo</title>
+    <style type="text/css">
+      body {
+        margin:0;
+        font-family:Monaco;
+      }
+      .circle {
+        height:100px;
+        width:100px;
+        border-radius:100px;
+        position:absolute;
+        background:rgb(162, 207, 81);
+        border:5px solid rgb(120, 147, 73);
+        cursor:move;
+      }
+      main {
+        position:fixed;
+        height:100%;
+        width:100%;
+      }
+      main h1 {
+        text-align:center;
+        font-size:20px;
+        color:gray;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1></h1>
+      </header>
+      <div class="circle" role="button"></div>
+    </main>
+    <script type="text/javascript">
+      $(document).ready(function(){ 
+        
+        // Get the element
+        var elem = $('.circle');
+        
+        // Set heading data
+        var heading = $('header h1');
+        
+        function setHeading(offset){
+          heading.text("Left: " + Math.round(offset.left) + "px" + " Top: " + Math.round(offset.top) + "px");
+        }
+        
+        // Saves the data to local storage
+        function saveLocation(offset){
+          localStorage.setItem("circleX", offset.left);
+          localStorage.setItem("circleY", offset.top);
+        }
+        
+        // Set an event to act on drag
+        elem.draggable({
+          containment: 'main',
+          drag: function(){
+            var offset = $(this).offset();
+            setHeading(offset);
+            saveLocation(offset);
+          }
+        });
+        
+        // Sets element from the data
+        elem.setPosition = function(){
+          var x = localStorage["circleX"];
+          var y = localStorage["circleY"];
+          setHeading({top:y, left:x});
+          
+          elem.offset({
+            left: x,
+            top: y
+          });
+        }
+        
+        // Initially render
+        elem.setPosition();
+        
+        // Set an interval to check for changes
+        var relayEnabled;
+        
+        // Don't run stuff while focused
+        $(window).blur(function(){
+          relayEnabled = setInterval(elem.setPosition, 1);
+        }).focus(function(){
+          clearInterval(relayEnabled);
+        });
+
+      });
+    </script>
+  </body>
+</html>
