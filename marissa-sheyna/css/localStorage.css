@@ -5,7 +5,7 @@ body {
   margin-top: 5%;
   background-color: #FFE6CC;
   font-size: 1em;
-  }
+}
 
 h1 {
   font-family: 'Averia Serif Libre', cursive;
@@ -15,9 +15,8 @@ h1 {
   color: #E65C00;
   margin-top: -95px;
   margin-bottom: 30px;
-  padding:0%;
-
-  }
+  padding: 0%;
+}
 
 p {
   font-family: arial;
@@ -25,7 +24,7 @@ p {
   margin-top: 3%;
   color:white;
   letter-spacing: .05em;
-  }
+}
 
 textarea {
   font-family: tahoma;
@@ -35,18 +34,18 @@ textarea {
   height: 200px;
   rows: 15;
   cols: 80;
-  }
+}
 
-section{
+section {
   background-color:#19A3A3;
-  padding:5%;
+  padding: 5%;
   margin-bottom: 100px;
 }
 
-#local{
+.top-margin {
   margin-top: 15%;
 }
 
-figure img{
+figure img {
   max-width: 630px;
 }
