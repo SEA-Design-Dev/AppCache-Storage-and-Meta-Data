@@ -1,0 +1,20 @@
+body {
+  background-color: #dddddd;
+}
+#fileInput {
+  border-radius: 0px;
+  margin-left: 43%;
+  margin-top: 5%;
+}
+#fileDisplayArea {
+  width: 80%;
+  margin: 0 auto;
+}
+h1 {
+  width: 15%;
+  margin: 0 auto;
+}
+#header {
+  background-color: black;
+  height: 50px;
+}
