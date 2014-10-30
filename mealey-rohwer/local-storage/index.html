@@ -46,8 +46,8 @@
         // Set heading data
         var heading = $('header h1');
         
-        function setHeading(x, y){
-          heading.text("Left: " + Math.round(x) + "px" + " Top: " + Math.round(y) + "px");
+        function setHeading(offset){
+          heading.text("Left: " + Math.round(offset.left) + "px" + " Top: " + Math.round(offset.top) + "px");
         }
         
         // Saves the data to local storage
@@ -61,17 +61,16 @@
           containment: 'main',
           drag: function(){
             var offset = $(this).offset();
-            setHeading(offset.left, offset.top);
+            setHeading(offset);
             saveLocation(offset);
           }
         });
         
         // Sets element from the data
         elem.setPosition = function(){
-          console.log("Run!");
           var x = localStorage["circleX"];
           var y = localStorage["circleY"];
-          setHeading(x,y);
+          setHeading({top:x, });
           
           elem.offset({
             left: x,
