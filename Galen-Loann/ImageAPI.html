@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Api Galen Loann</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="api.css">
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <section div="page-wrapper">
+
+        <header>
+            <h1>Gallery Preview</h2>
+                <h3>Make a quick gallery!</h3>
+                <small>
+                    <strong>Students:</strong>Galen and Loann</small>
+
+        </header>
+
+        <form class="add-name">
+            <h3>Name Image</h3>
+            <input type="text" id="gallery-name" placeholder="name your image" value="" onblur="LocalStore()">
+
+            <button onclick="makeTitle(); return false;">Submit</button>
+        </form>
+
+        <section class="image-upload">
+            <h3 class="upload-dir">Upload Image</h3>
+            <input type="file" id="fileInput" multiple>
+        </section>
+    </section>
+
+    <section class="gallery">
+        <h2 id="gallery-title" alt="gallery title"></h2>
+        <div id="fileDisplayArea">
+
+    </section>
+    </section>
+
+    <script src="images.js"></script>
+
+</body>
+
+<script>
+startup();
+</script>
+
+
+</html>

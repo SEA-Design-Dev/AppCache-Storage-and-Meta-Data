@@ -1,0 +1,71 @@
+/*  page style
+
+#page-wrapper { border: solid black 1px;}
+.image-upload { border: solid red 1px;}
+.add-name { border: solid blue 1px;}
+.title { border: solid black 1px;}
+
+*/
+
+html, body {
+    font-family: 'Rokkitt', serif;
+    font-size: 100%;
+    background: none;
+}
+#page-wrapper {
+    width: 600px;
+    background: none;
+    padding: 1em;
+    margin: 1em auto;
+    min-height: 300px;
+    border-top: 20px;
+    text-align: center;
+}
+/* header and body */
+
+.add-name, .image-upload, .gallery {
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+}
+.fileDisplayArea {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+}
+header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    vertical-align: bottom;
+    text-align: center;
+}
+h2 {
+    color: red;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: none;
+    text-align: center;
+}
+}
+#fileDisplayArea {
+    margin-top: 2em;
+    width: 100%;
+    overflow-x: auto;
+    text-align: center;
+}
+#fileDisplayArea img {
+    max-width: 175px;
+    max-width: 175px;
+    padding-right: 10px;
+}
