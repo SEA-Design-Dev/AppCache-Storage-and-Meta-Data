@@ -2,27 +2,51 @@ body {
   width: 700px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
-  background-color: whitesmoke;
+  margin-top: 5%;
+  background-color: #FFE6CC;
+  font-size: 1em;
   }
-.divHeadline {
-  font-family: "Rancho";
-  font-size: 56px;
+
+h1 {
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 4em;
   font-weight: bold;
+  text-align: center;
+  color: #E65C00;
+  margin-top: -95px;
+  margin-bottom: 30px;
+  padding:0%;
+
   }
+
 p {
-  font-family: "Droid Sans";
-  font-size: 16px;
-  margin-top: 10px;
-  line-height: 130%;
+  font-family: arial;
+  font-size: 1.1em;
+  margin-top: 3%;
+  color:white;
+  letter-spacing: .05em;
   }
+
 textarea {
-  font-family: "Droid Sans";
+  font-family: tahoma;
   font-size: 16px;
   line-height: 130%;
-  margin-top: 7px;
-  width: 700px;
+  width: 630px;
   height: 200px;
   rows: 15;
   cols: 80;
   }
+
+section{
+  background-color:#19A3A3;
+  padding:5%;
+  margin-bottom: 100px;
+}
+
+#local{
+  margin-top: 15%;
+}
+
+figure img{
+  max-width: 630px;
+}
