@@ -1,0 +1,86 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+/* page style */
+
+html, body {
+    font-family: 'Rokkitt', serif;
+    font-size: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 3em;
+    border-top: 40px;
+}
+/* header and body */
+
+header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+h2 {
+    color: red;
+}
+
+fieldset {
+    position: relative;
+    padding: 2em;
+    margin-top: 1em;
+    display: inline-block;
+    width: 400px;
+    border-color: silver 1px;
+}
+
+#span_3_of_5, .gallery {
+    width: 59.36%;
+}
+
+input {
+    float: center;
+    vertical-align: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+small {
+    color: silver;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    padding-bottom: 14px;
+    font-size: 19px;
+}
+
+#fileDisplayArea {
+    margin-top: 2em;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#fileDisplayArea img {
+		max-width: 200px;
+    max-width: 175px;
+    padding: 10px;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .col {
+    margin: 1% 0 1% 0%;
+}
+    .span_3_of_5 {
+    width: 100%;
+}
