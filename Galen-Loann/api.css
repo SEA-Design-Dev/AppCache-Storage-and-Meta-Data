@@ -1,71 +1,86 @@
-/*  page style
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box
+}
 
-#page-wrapper { border: solid black 1px;}
-.image-upload { border: solid red 1px;}
-.add-name { border: solid blue 1px;}
-.title { border: solid black 1px;}
-
-*/
+/* page style */
 
 html, body {
-  font-family: 'Rokkitt', serif;
-  font-size: 100%;
-  background: none;
+    font-family: 'Rokkitt', serif;
+    font-size: 100%;
+    text-decoration: none;
+    text-align: center;
 }
+
 #page-wrapper {
-  width: 600px;
-  background: none;
-  padding: 1em;
-  margin: 1em auto;
-  min-height: 300px;
-  border-top: 20px;
-  text-align: center;
+    width: 100%;
+    padding: 3em;
+    border-top: 40px;
 }
 /* header and body */
 
-.add-name, .image-upload, .gallery {
-  height: 100px;
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
-  position: relative;
-  display: block;
-  vertical-align: middle;
+header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
     text-align: center;
 }
-.fileDisplayArea {
-  height: 300px;
-  width: 100%;
-  position: absolute;
-}
-header {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: block;
-  vertical-align: bottom;
-  text-align: center;
-}
+
 h2 {
-  color: red;
+    color: red;
 }
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background: none;
-  text-align: center;
+
+fieldset {
+    position: relative;
+    padding: 2em;
+    margin-top: 1em;
+    display: inline-block;
+    width: 400px;
+    border-color: silver 1px;
 }
+
+#span_3_of_5, .gallery {
+    width: 59.36%;
 }
+
+input {
+    float: center;
+    vertical-align: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+small {
+    color: silver;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    padding-bottom: 14px;
+    font-size: 19px;
+}
+
 #fileDisplayArea {
-  margin-top: 2em;
-  width: 100%;
-  overflow-x: auto;
-  text-align: center;
+    margin-top: 2em;
+    width: 100%;
+    overflow-x: auto;
 }
+
 #fileDisplayArea img {
-  max-width: 175px;
-  max-width: 175px;
-  padding-right: 10px;
+		max-width: 200px;
+    max-width: 175px;
+    padding: 10px;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .col {
+    margin: 1% 0 1% 0%;
+}
+    .span_3_of_5 {
+    width: 100%;
 }
