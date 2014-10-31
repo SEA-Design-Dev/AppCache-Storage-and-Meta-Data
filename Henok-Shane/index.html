@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html manifest="ap.appcache">
 
   <head>
     <meta charset="utf-8">
-
   </head>
 
 
@@ -21,13 +20,17 @@
     <div id="fileDisplayArea"></div>
 
     </div>
-    <form id="answers" method="post" action=" ">
-      First Name: <input type="text" id="firstname" label="firstname" class="stored" value=" ">
-      Last Name: <input type="text" id="lastname" label="lastname" class="stored" value=" ">
-      Email: <input type="email" id="email" label="email" class="stored" value=" ">
-      Phone: <input type="tel" id="phone" label="phone" class="stored" value=" ">
-      <button type="submit" onclick="submit">
-    </form>
+    <fieldset id="answers" method="post" action=" ">
+      <label for="firstname">first name:</label>
+      <input type="text" id="firstname" name="firstname" placeholder="Steve" class="stored">
+      <label for="lastname">last name:</label>
+      <input type="text" id="lastname" label="lastname" placeholder="Smith" class="stored">
+      <label for="email">email address:</label>
+      <input type="email" id="email" label="email" placeholder="example@gmail.com" class="stored">
+      <label for="phone">phone number:</label>
+      <input type="tel" id="phone" label="phone" placeholder="555-5555" class="stored">
+      <button id="submit">Submit info to our marketing team</button>
+    </fieldset>
     <script src="text.js"></script>
   </body>
 

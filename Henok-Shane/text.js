@@ -22,42 +22,36 @@ window.onload = function(){
     } else {
       fileDisplayArea.innerHTML = "File not supported!"
     }
-  });
-}
+  })
+  fname.value = localStorage.getItem(fname.id);
+  lname.value = localStorage.getItem(lname.id);
+  email.value = localStorage.getItem(email.id);
+  phone.value = localStorage.getItem(phone.id);
+};
+
+var fname = document.getElementById("firstname");
+var lname = document.getElementById("lastname");
+var email = document.getElementById("email");
+var phone = document.getElementById("phone");
+
+fname.onblur = function(){
+  storeData(this.id, this.value);
+};
+lname.onblur = function(){
+  storeData(this.id, this.value);
+};
+email.onblur = function(){
+  storeData(this.id, this.value);
+};
+phone.onblur = function(){
+  storeData(this.id, this.value);
+};
 
 function storeData(name, value){
   localStorage.setItem(name, value);
 }
 
-document.getElementById('firstname').onblur = function(){
-  storeData(this.id, this.value);
-};
-document.getElementById('lastname').onblur = function(){
-  storeData(this.id, this.value);
-};
-document.getElementById('email').onblur = function(){
-  storeData(this.id, this.value);
-};
-document.getElementById('phone').onblur = function(){
-  storeData(this.id, this.value);
-};
-
-if(localStorage) {
-   document.getElementById('answers').addEventListener('onblur',
-   function() {
-     var firstname = document.getElementById('firstname').value;
-     var lastname = document.getElementById('lastname').value;
-     var email = document.getElementById('email').value;
-     var phone = document.getElementById('phone').value;
-
-     localStorage.setItem('firstname', firstname);
-     localStorage.setItem('lastname', lastname);
-     localStorage.setItem('email', email);
-     localStorage.setItem('phone', phone);
-   });
-}
-
-document.getElementById('answers').addEventListener('submit',
+document.getElementById('submit').addEventListener("click",
   function() {
   localStorage.clear();
 });
