@@ -55,4 +55,3 @@ document.getElementById('submit').addEventListener("click",
   function() {
   localStorage.clear();
 });
-
